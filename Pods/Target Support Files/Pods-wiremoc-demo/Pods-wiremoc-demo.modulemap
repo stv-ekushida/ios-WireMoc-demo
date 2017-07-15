@@ -1,0 +1,6 @@
+framework module Pods_wiremoc_demo {
+  umbrella header "Pods-wiremoc-demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
