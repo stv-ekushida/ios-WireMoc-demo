@@ -1,17 +1,18 @@
 //
-//  UsersListAPI.swift
+//  UserInfoAPI.swift
 //  wiremoc-demo
 //
-//  Created by Eiji Kushida on 2017/07/15.
+//  Created by Eiji Kushida on 2017/07/16.
 //  Copyright © 2017年 Eiji Kushida. All rights reserved.
 //
+
 import UIKit
 
-final class UsersListAPI {
+final class UserInfoAPI {
 
-    func fetch() {
+    func fetch(userId: String) {
 
-        let router = Router.users([:])
+        let router = Router.userInfo(["userId": userId])
 
         APIClient().request(router: router) { (response) in
 

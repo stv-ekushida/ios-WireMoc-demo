@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //MARK: IBAction
+    @IBAction func didTapLoadUsersList(_ sender: UIButton) {
+        UsersListAPI().fetch()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UsersAPI().fetch()
+    @IBAction func didTapLoadUserInfo(_ sender: UIButton) {
+        UserInfoAPI().fetch(userId: "2")
     }
 }
 

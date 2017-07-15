@@ -13,6 +13,7 @@ enum Router: URLRequestConvertible {
     static let baseURLString = "http://localhost:1234"
 
     case users([String: Any])
+    case userInfo([String: Any])
 
     func asURLRequest() throws -> URLRequest {
 
@@ -21,6 +22,9 @@ enum Router: URLRequestConvertible {
             switch self {
             case .users(let params):
                 return (.get, "/users", params)
+
+            case .userInfo(let params):
+                return (.get, "/userById", params)
             }
         }()
 
